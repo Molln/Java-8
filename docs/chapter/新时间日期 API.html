@@ -1,0 +1,387 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>新时间日期 API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="接口默认方法与静态方法.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lambda 表达式.html">
+            
+                <a href="Lambda 表达式.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="函数式接口.html">
+            
+                <a href="函数式接口.html">
+            
+                    
+                    函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="方法引用与构造器引用.html">
+            
+                <a href="方法引用与构造器引用.html">
+            
+                    
+                    方法引用与构造器引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Stream API.html">
+            
+                <a href="Stream API.html">
+            
+                    
+                    Stream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="接口默认方法与静态方法.html">
+            
+                <a href="接口默认方法与静态方法.html">
+            
+                    
+                    接口默认方法与静态方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="新时间日期 API.html">
+            
+                <a href="新时间日期 API.html">
+            
+                    
+                    新时间日期 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    其它新特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Optional 类.html">
+            
+                <a href="Optional 类.html">
+            
+                    
+                    Optional 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="重复注解与类型注解.html">
+            
+                <a href="重复注解与类型注解.html">
+            
+                    
+                    重复注解与类型注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >新时间日期 API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65B0;&#x65F6;&#x95F4;&#x65E5;&#x671F;-api">&#x65B0;&#x65F6;&#x95F4;&#x65E5;&#x671F; API</h1>
+<h3 id="&#x4E00;-&#x4F20;&#x7EDF;&#x65E5;&#x671F;&#x65F6;&#x95F4;-api">&#x4E00; &#x4F20;&#x7EDF;&#x65E5;&#x671F;&#x65F6;&#x95F4; API</h3>
+<p>&#x4F20;&#x7EDF;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5316;&#x5B58;&#x5728;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;</p>
+<h3 id="&#x4E8C;-&#x672C;&#x5730;&#x65F6;&#x95F4;">&#x4E8C; &#x672C;&#x5730;&#x65F6;&#x95F4;</h3>
+<p>LocalDate</p>
+<p>LocalTime</p>
+<p>LocalDateTime</p>
+<p>LocalDate&#x3001;LocalTime&#x3001;LocalDateTime &#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x65F6;<strong>&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#x5BF9;&#x8C61;</strong>&#xFF0C;&#x5206;&#x522B;&#x8868;&#x793A;&#x4F7F;&#x7528; ISO-8601 &#x65E5;&#x5386;&#x7CFB;&#x7EDF;&#x7684;&#x65E5;&#x671F;&#x3001;&#x65F6;&#x95F4;&#x3001;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x3002;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;&#x7684;&#x65E5;&#x671F;&#x6216;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x4E0D;&#x5305;&#x542B;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;&#x4FE1;&#x606F;&#x3002;&#x4E5F;&#x4E0D;&#x5305;&#x542B;&#x4E0E;&#x65F6;&#x533A;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;ISO-8601 &#x65E5;&#x5386;&#x7CFB;&#x7EDF;&#x662F;&#x56FD;&#x9645;&#x6807;&#x51C6;&#x5316;&#x7EC4;&#x7EC7;&#x5236;&#x5B9A;&#x7684;&#x73B0;&#x4EE3;&#x516C;&#x6C11;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7684;&#x8868;&#x793A;&#x6CD5;&#x3002;</p>
+<p><img src="img/LocalDateTime.jpg" alt=""></p>
+<h3 id="&#x4E09;-&#x65F6;&#x95F4;&#x6233;">&#x4E09; &#x65F6;&#x95F4;&#x6233;</h3>
+<p><code>Instant</code> &#x7528;&#x4E8E;&#x201D;&#x65F6;&#x95F4;&#x6233;&#x201C;&#x7684;&#x8FD0;&#x7B97;&#x3002;&#x4ED6;&#x662F;&#x4EE5; Unix &#x5143;&#x5E74;&#x5F00;&#x59CB;&#x6240;&#x7ECF;&#x5386;&#x7684;&#x63CF;&#x8FF0;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x3002;</p>
+<p>Unix &#x5143;&#x5E74;&#xFF1A;UTC &#x65F6;&#x533A; 1970 &#x5E74; 1 &#x6708; 1 &#x65E5; 0 &#x70B9; 0 &#x5206; 0 &#x79D2; </p>
+<p>Duration    &#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x201D;&#x65F6;&#x95F4;&#x201C;&#x95F4;&#x9694;</p>
+<p>Period        &#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x201D;&#x65E5;&#x671F;&#x201C;&#x95F4;&#x9694;</p>
+<h3 id="&#x56DB;-&#x65F6;&#x95F4;&#x6821;&#x6B63;&#x5668;">&#x56DB; &#x65F6;&#x95F4;&#x6821;&#x6B63;&#x5668;</h3>
+<p>TemporalAdjuster     &#x65F6;&#x95F4;&#x77EB;&#x6B63;&#x5668;&#x3002;&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4F8B;&#x5982;&#xFF1A;&#x4E0B;&#x5468;&#x65E5;&#x7684;&#x65E5;&#x671F;</p>
+<p>TemporalAdjusters   &#x8BE5;&#x7C7B;&#x901A;&#x8FC7;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x5E38;&#x7528; TemporalAdjuster &#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x83B7;&#x53D6;&#x4E0B;&#x5468;&#x65E5;</p>
+<pre><code class="lang-java">LocalDate nextSunday = LocalDate.now().with(
+    TemporalAdjusters.next(DayOfWeek.SUNDAY)
+);
+</code></pre>
+<h3 id="&#x4E94;-&#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5316;">&#x4E94; &#x65F6;&#x95F4;&#x683C;&#x5F0F;&#x5316;</h3>
+<p><code>java.time.format.DateTimeFormatter</code></p>
+<p>&#x4E09;&#x79CD;&#x683C;&#x5F0F;&#x5316;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;</li>
+<li>&#x8BED;&#x8A00;&#x73AF;&#x5883;&#x76F8;&#x5173;&#x7684;&#x683C;&#x5F0F;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x683C;&#x5F0F;</li>
+</ul>
+<h3 id="&#x516D;-&#x65F6;&#x533A;">&#x516D; &#x65F6;&#x533A;</h3>
+<p>Java 8 &#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x5BF9;&#x65F6;&#x533A;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x5E26;&#x65F6;&#x533A;&#x7684;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x5206;&#x522B;&#x4E3A; ZonedDate&#x3001;ZonedTime&#x3001;ZonedDateTime</p>
+<p>&#x6BCF;&#x4E2A;&#x65F6;&#x533A;&#x90FD;&#x6709;&#x5BF9;&#x5E94;&#x7684; ID&#xFF0C;&#x65F6;&#x533A; ID &#x683C;&#x5F0F;&#x4E3A; &#x201C;{&#x533A;&#x57DF;}/{&#x57CE;&#x5E02;}&#x201D;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;Asia/Shanghai</p>
+<p>ZoneId.class    &#x8BE5;&#x7C7B;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x65F6;&#x533A;&#x4FE1;&#x606F;</p>
+<ul>
+<li>getAvailableZoneIds()    &#x83B7;&#x53D6;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x65F6;&#x533A;</li>
+<li>of(id)    &#x6839;&#x636E;&#x65F6;&#x533A;Id &#x83B7;&#x53D6; ZoneId &#x5BF9;&#x8C61;</li>
+</ul>
+<h3 id="&#x4E03;-&#x4E0E;&#x4F20;&#x7EDF;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x8F6C;&#x6362;">&#x4E03; &#x4E0E;&#x4F20;&#x7EDF;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x7684;&#x8F6C;&#x6362;</h3>
+<p><img src="img/OldNew.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="接口默认方法与静态方法.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 接口默认方法与静态方法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"新时间日期 API","level":"1.7","depth":1,"next":{"title":"其它新特性","level":"1.8","depth":1,"ref":"","articles":[{"title":"Optional 类","level":"1.8.1","depth":2,"path":"chapter/Optional 类.md","ref":"chapter/Optional 类.md","articles":[]},{"title":"重复注解与类型注解","level":"1.8.2","depth":2,"path":"chapter/重复注解与类型注解.md","ref":"chapter/重复注解与类型注解.md","articles":[]}]},"previous":{"title":"接口默认方法与静态方法","level":"1.6","depth":1,"path":"chapter/接口默认方法与静态方法.md","ref":"chapter/接口默认方法与静态方法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter/新时间日期 API.md","mtime":"2020-05-05T14:48:11.719Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-09T06:59:36.402Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

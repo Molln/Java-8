@@ -1,0 +1,491 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>函数式接口 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="方法引用与构造器引用.html" />
+    
+    
+    <link rel="prev" href="Lambda 表达式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lambda 表达式.html">
+            
+                <a href="Lambda 表达式.html">
+            
+                    
+                    Lambda 表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="函数式接口.html">
+            
+                <a href="函数式接口.html">
+            
+                    
+                    函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="方法引用与构造器引用.html">
+            
+                <a href="方法引用与构造器引用.html">
+            
+                    
+                    方法引用与构造器引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Stream API.html">
+            
+                <a href="Stream API.html">
+            
+                    
+                    Stream API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="接口默认方法与静态方法.html">
+            
+                <a href="接口默认方法与静态方法.html">
+            
+                    
+                    接口默认方法与静态方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="新时间日期 API.html">
+            
+                <a href="新时间日期 API.html">
+            
+                    
+                    新时间日期 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    其它新特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Optional 类.html">
+            
+                <a href="Optional 类.html">
+            
+                    
+                    Optional 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="重复注解与类型注解.html">
+            
+                <a href="重复注解与类型注解.html">
+            
+                    
+                    重复注解与类型注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >函数式接口</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;">&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h1>
+<h3 id="&#x4E00;-&#x4EC0;&#x4E48;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;">&#x4E00; &#x4EC0;&#x4E48;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h3>
+<ul>
+<li>&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x79F0;&#x4E3A;<strong>&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</strong></li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x521B;&#x5EFA;&#x8BE5;&#x63A5;&#x53E3;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x82E5; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x53D7;&#x68C0;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x5F02;&#x5E38;&#x9700;&#x8981;&#x5728;&#x76EE;&#x6807;&#x63A5;&#x53E3;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;&#x4E0A;&#x58F0;&#x660E;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#x4E0A;&#x4F7F;&#x7528; <code>@FunctionalInterface</code>&#x6CE8;&#x89E3;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x4E00;&#x9897;&#x68C0;&#x67E5;&#x5B83;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#xFF0C;&#x540C;&#x65F6; javadoc &#x4E5F;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x6761;&#x58F0;&#x660E;&#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</li>
+</ul>
+<h3 id="&#x4E8C;-&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;">&#x4E8C; &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h3>
+<pre><code class="lang-java"><span class="hljs-meta">@FunctionalInterface</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> interface <span class="hljs-title">MyFun</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-comment">// &#x4F7F;&#x7528;&#x6CDB;&#x578B;</span>
+<span class="hljs-meta">@FunctionalInterface</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MyFun</span>&lt;<span class="hljs-title">T</span>&gt;()</span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">getValue</span><span class="hljs-params">(T t)</span></span>;
+}
+</code></pre>
+<h3 id="&#x4E09;-&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;-lambda-&#x8868;&#x8FBE;&#x5F0F;">&#x4E09; &#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012; Lambda &#x8868;&#x8FBE;&#x5F0F;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">test</span><span class="hljs-params">(MyFun&lt;String&gt; mf,String str)</span></span>{
+    <span class="hljs-keyword">return</span> mf.getValue(str):
+}
+
+String newStr = test((str) -&gt; str.toUpperCase(),<span class="hljs-string">&quot;abcdef&quot;</span>);
+System.out.println(newStr);
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x5C06; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#xFF0C;&#x63A5;&#x6536; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x662F;&#x4E0E;&#x8BE5; Lambda &#x8868;&#x8FBE;&#x5F0F;&#x517C;&#x5BB9;&#x7684;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h3 id="&#x56DB;-java-&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;">&#x56DB; Java &#x5185;&#x7F6E;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h3>
+<h4 id="1-&#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;">1 &#x56DB;&#x5927;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;&#x540D;</th>
+<th>&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consumer<t></t></td>
+<td>T</td>
+<td>void</td>
+<td>&#x6D88;&#x8D39;&#x578B;&#x63A5;&#x53E3;&#xFF1A;&#x5BF9;&#x7C7B;&#x578B;&#x4E3A; T &#x7684;&#x5BF9;&#x8C61;&#x5E94;&#x7528;&#x64CD;&#x4F5C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#xFF1A;void accept(T t);</td>
+</tr>
+<tr>
+<td>Supplier<t></t></td>
+<td></td>
+<td>T</td>
+<td>&#x4F9B;&#x7ED9;&#x578B;&#x63A5;&#x53E3;&#xFF1A;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x4E3A; T &#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5; T get();</td>
+</tr>
+<tr>
+<td>Function<t,r></t,r></td>
+<td>T</td>
+<td>R</td>
+<td>&#x51FD;&#x6570;&#x578B;&#x63A5;&#x53E3;&#xFF1A;&#x5BF9;&#x7C7B;&#x578B;&#x4E3A; T &#x7684;&#x5BF9;&#x8C61;&#x5E94;&#x7528;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE; R &#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#xFF1A;R apply(T t)</td>
+</tr>
+<tr>
+<td>Predicate<t></t></td>
+<td>T</td>
+<td>boolean</td>
+<td>&#x65AD;&#x8A00;&#x578B;&#x63A5;&#x53E3;&#xFF1A;&#x5224;&#x5B9A;&#x7C7B;&#x578B;&#x4E3A; T &#x7684;&#x53C2;&#x6570;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x67D0;&#x7EA6;&#x675F;&#xFF0C;&#x8FD4;&#x56DE; boolean&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#xFF1A;boolean test(T t);</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-&#x5176;&#x5B83;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;">2 &#x5176;&#x5B83;&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;&#x5F0F;&#x63A5;&#x53E3;</th>
+<th>&#x53C2;&#x6570;&#x7C7B;&#x578B;</th>
+<th>&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnaryOperation<t></t></td>
+<td>T</td>
+<td>T</td>
+<td>Function&#x5B50;&#x63A5;&#x53E3;&#xFF0C;&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;T&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A; T apply(T t);</td>
+</tr>
+<tr>
+<td>BiFunction<t,u,r></t,u,r></td>
+<td>T,U</td>
+<td>R</td>
+<td>&#x5BF9;&#x7C7B;&#x578B;&#x4E3A; T, U &#x53C2;&#x6570;&#x5E94;&#x7528;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD4;&#x56DE; R &#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A; R apply(T t, U u);</td>
+</tr>
+<tr>
+<td>BinaryOperation<t></t></td>
+<td>T,T</td>
+<td>T</td>
+<td>BiFunction &#x5B50;&#x63A5;&#x53E3;&#xFF0C;&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E8C;&#x5143;&#x8FD0;&#x7B97;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;T&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A; T apply(T t1, T t2);</td>
+</tr>
+<tr>
+<td>BiConsumer<t,u></t,u></td>
+<td>T,U</td>
+<td>void</td>
+<td>&#x5BF9;&#x7C7B;&#x578B;&#x4E3A;T, U &#x53C2;&#x6570;&#x5E94;&#x7528;&#x64CD;&#x4F5C;&#x3002;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x4E3A; void accept(T t, U u)</td>
+</tr>
+<tr>
+<td>ToIntFunction<t></t></td>
+<td>T</td>
+<td>int</td>
+<td>&#x8BA1;&#x7B97; int &#x503C;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>ToLongFunction<t></t></td>
+<td>T</td>
+<td>long</td>
+<td>&#x8BA1;&#x7B97; long &#x503C;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>ToDoubleFunction<t></t></td>
+<td>T</td>
+<td>double</td>
+<td>&#x8BA1;&#x7B97; double &#x503C;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>IntFunction<r></r></td>
+<td>int</td>
+<td>R</td>
+<td>&#x53C2;&#x6570;&#x4E3A; int &#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>LongFunction<r></r></td>
+<td>long</td>
+<td>R</td>
+<td>&#x53C2;&#x6570;&#x4E3A; long &#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>DoubleFunction<r></r></td>
+<td>double</td>
+<td>R</td>
+<td>&#x53C2;&#x6570;&#x4E3A; double &#x7C7B;&#x578B;&#x7684;&#x51FD;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lambda 表达式.html" class="navigation navigation-prev " aria-label="Previous page: Lambda 表达式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="方法引用与构造器引用.html" class="navigation navigation-next " aria-label="Next page: 方法引用与构造器引用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"函数式接口","level":"1.3","depth":1,"next":{"title":"方法引用与构造器引用","level":"1.4","depth":1,"path":"chapter/方法引用与构造器引用.md","ref":"chapter/方法引用与构造器引用.md","articles":[]},"previous":{"title":"Lambda 表达式","level":"1.2","depth":1,"path":"chapter/Lambda 表达式.md","ref":"chapter/Lambda 表达式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter/函数式接口.md","mtime":"2020-05-06T09:17:13.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-09T06:59:36.402Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
